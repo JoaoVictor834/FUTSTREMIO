@@ -1,12 +1,12 @@
 const { addonBuilder, getRouter } = require('stremio-addon-sdk');
 const SOURCES = require('./sources.json');
 
-module.exports = function(HOST) {
+module.exports = function (HOST) {
     const builder = new addonBuilder({
         id: 'org.joao.tvefutebolhttp',
         version: '1.0.0',
-        name: 'TV/FUTEBOL BR',
-        resources: ['stream', 'catalog'],
+        name: 'FUTEBOL BR',
+        resources: ['stream', 'catalog', 'meta'],
         types: ['tv'],
         catalogs: [
             { type: 'tv', id: 'top' }
@@ -27,12 +27,40 @@ module.exports = function(HOST) {
         });
     });
 
+    //TODO: arrumar parametros, a documentação é meio confusa sobre onde usar
+
+    const metObj = [];
+    SOURCES.forEach(s => {
+        metObj.push({
+            id: `tvid${s.id}`,
+            name: s.name,
+            releaseInfo: '2025',
+            poster: s.poster,
+            posterShape: 'landscape',
+            type: 'tv',
+            background: s.banner,
+            overview: "LIVE DO CANAL DE TV",
+            description: "LIVE DO CANAL " + s.name.toUpperCase(),
+            title: s.name.toString()
+        });
+    });
+
     builder.defineCatalogHandler(args => {
         if (args.type === 'tv' && args.id === 'top') {
             return Promise.resolve({ metas: [...met] });
         }
         return Promise.resolve({ metas: [] });
     });
+
+    builder.defineMetaHandler(function (args) {
+        if (args.type === 'tv') {
+            console.log(args)
+            let meta = metObj.find(m => m.id === args.id)
+            if(!meta) return
+            return Promise.resolve({ meta: meta });
+        }
+        return Promise.resolve({ meta: [] });
+    })
 
     builder.defineStreamHandler(args => {
         if (args.type === 'tv') {
@@ -43,7 +71,7 @@ module.exports = function(HOST) {
                 name: s.name,
                 description: `LIVE AO VIVO DO ${s.name.toUpperCase()}`,
                 type: 'tv',
-                url: `${HOST}/stream${s.name}.m3u8`
+                url: `${HOST}/stream/${s.name}.m3u8`
             };
             return Promise.resolve({ streams: [stream] });
         }
