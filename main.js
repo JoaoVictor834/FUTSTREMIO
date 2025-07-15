@@ -87,6 +87,6 @@ const port = address.port ? `:${address.port}` : '';
 const HOST = `${protocol}${host}${port}`;
   
   console.log(`Proxy rodando na porta ` + HOST);
-  module.exports = HOST
 });
 
+module.exports = HOST
