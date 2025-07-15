@@ -1,0 +1,151 @@
+[
+  {
+    "name": "sportv",
+    "id": 1,
+    "url": "https://embmaxtv.online/sportv/tracks-v1a1/mono.ts.m3u8",
+    "banner": "https://embedcanaistv.com/wp-content/uploads/2025/07/SporTV.png",
+    "poster": "https://embedcanaistv.com/wp-content/uploads/2025/07/SporTV.png"
+  },
+  {
+    "name": "sportv2",
+    "id": 2,
+    "url": "https://embmaxtv.online/sportv2/tracks-v1a1/mono.ts.m3u8",
+    "banner": "https://embedcanaistv.com/wp-content/uploads/2025/07/SporTV.png",
+    "poster": "https://embedcanaistv.com/wp-content/uploads/2025/07/SporTV.png"
+  },
+  {
+    "name": "sportv3",
+    "id": 3,
+    "url": "https://embmaxtv.online/sportv3/tracks-v1a1/mono.ts.m3u8",
+    "banner": "https://embedcanaistv.com/wp-content/uploads/2025/07/SporTV.png",
+    "poster": "https://embedcanaistv.com/wp-content/uploads/2025/07/SporTV.png"
+  },
+  {
+    "name": "espn",
+    "id": 4,
+    "url": "https://embmaxtv.online/espn/tracks-v1a1/mono.ts.m3u8",
+    "banner": "https://embedcanaistv.com/wp-content/uploads/2025/06/ESPN_wordmark.svg_.png",
+    "poster": "https://embedcanaistv.com/wp-content/uploads/2025/06/ESPN_wordmark.svg_.png"
+  },
+  {
+    "name": "espn2",
+    "id": 5,
+    "url": "https://embmaxtv.online/espn2/tracks-v1a1/mono.ts.m3u8",
+    "banner": "https://embedcanaistv.com/wp-content/uploads/2025/06/ESPN_wordmark.svg_.png",
+    "poster": "https://embedcanaistv.com/wp-content/uploads/2025/06/ESPN_wordmark.svg_.png"
+  },
+  {
+    "name": "espn3",
+    "id": 6,
+    "url": "https://embmaxtv.online/espn3/tracks-v1a1/mono.ts.m3u8",
+    "banner": "https://embedcanaistv.com/wp-content/uploads/2025/06/ESPN_wordmark.svg_.png",
+    "poster": "https://embedcanaistv.com/wp-content/uploads/2025/06/ESPN_wordmark.svg_.png"
+  },
+  {
+    "name": "espn4",
+    "id": 7,
+    "url": "https://embmaxtv.online/espn4/tracks-v1a1/mono.ts.m3u8",
+    "banner": "https://embedcanaistv.com/wp-content/uploads/2025/06/ESPN_wordmark.svg_.png",
+    "poster": "https://embedcanaistv.com/wp-content/uploads/2025/06/ESPN_wordmark.svg_.png"
+  },
+  {
+    "name": "espn5",
+    "id": 8,
+    "url": "https://embmaxtv.online/espn5/tracks-v1a1/mono.ts.m3u8",
+    "banner": "https://embedcanaistv.com/wp-content/uploads/2025/07/SporTV.png",
+    "poster": "https://embedcanaistv.com/wp-content/uploads/2025/07/SporTV.png"
+  },
+  {
+    "name": "espn6",
+    "id": 9,
+    "url": "https://embmaxtv.online/espn6/tracks-v1a1/mono.ts.m3u8",
+    "banner": "https://embedcanaistv.com/wp-content/uploads/2025/06/ESPN_wordmark.svg_.png",
+    "poster": "https://embedcanaistv.com/wp-content/uploads/2025/06/ESPN_wordmark.svg_.png"
+  },
+  {
+    "name": "dazn",
+    "id": 10,
+    "url": "https://embmaxtv.online/dazn/tracks-v1a1/mono.ts.m3u8",
+    "banner": "https://embedcanaistv.com/wp-content/uploads/2025/06/DAZN_BoxedLogo_01_RGB.png",
+    "poster": "https://embedcanaistv.com/wp-content/uploads/2025/06/DAZN_BoxedLogo_01_RGB.png"
+  },
+  {
+    "name": "premiere1",
+    "id": 11,
+    "url": "https://embmaxtv.online/premiereclubes/tracks-v1a1/mono.ts.m3u8",
+    "banner": "https://embedcanaistv.com/wp-content/uploads/2025/06/premiere.png",
+    "poster": "https://embedcanaistv.com/wp-content/uploads/2025/06/premiere.png"
+  },
+  {
+    "name": "premiere2",
+    "id": 12,
+    "url": "https://embmaxtv.online/premiere2/tracks-v1a1/mono.ts.m3u8",
+    "banner": "https://embedcanaistv.com/wp-content/uploads/2025/06/premiere.png",
+    "poster": "https://embedcanaistv.com/wp-content/uploads/2025/06/premiere.png"
+  },
+  {
+    "name": "premiere3",
+    "id": 13,
+    "url": "https://embmaxtv.online/premiere3/tracks-v1a1/mono.ts.m3u8",
+    "banner": "https://embedcanaistv.com/wp-content/uploads/2025/06/premiere.png",
+    "poster": "https://embedcanaistv.com/wp-content/uploads/2025/06/premiere.png"
+  },
+  {
+    "name": "premiere4",
+    "id": 14,
+    "url": "https://embmaxtv.online/premiere4/tracks-v1a1/mono.ts.m3u8",
+    "banner": "https://embedcanaistv.com/wp-content/uploads/2025/06/premiere.png",
+    "poster": "https://embedcanaistv.com/wp-content/uploads/2025/06/premiere.png"
+  },
+  {
+    "name": "premiere5",
+    "id": 15,
+    "url": "https://embmaxtv.online/premiere5/tracks-v1a1/mono.ts.m3u8",
+    "banner": "https://embedcanaistv.com/wp-content/uploads/2025/06/premiere.png",
+    "poster": "https://embedcanaistv.com/wp-content/uploads/2025/06/premiere.png"
+  },
+  {
+    "name": "premiere6",
+    "id": 16,
+    "url": "https://embmaxtv.online/premiere6/tracks-v1a1/mono.ts.m3u8",
+    "banner": "https://embedcanaistv.com/wp-content/uploads/2025/06/premiere.png",
+    "poster": "https://embedcanaistv.com/wp-content/uploads/2025/06/premiere.png"
+  },
+  {
+    "name": "sbtsp",
+    "id": 17,
+    "url": "https://embmaxtv.online/sbtsp/tracks-v1a1/mono.ts.m3u8",
+    "banner": "https://embedcanaistv.com/wp-content/uploads/2025/06/sbt.png",
+    "poster": "https://embedcanaistv.com/wp-content/uploads/2025/06/sbt.png"
+  },
+  {
+    "name": "globosp",
+    "id": 18,
+    "url": "https://embmaxtv.online/globosp/tracks-v1a1/mono.ts.m3u8",
+    "banner": "https://embedcanaistv.com/wp-content/uploads/2025/06/TVGlobo2025.webp",
+    "poster": "https://embedcanaistv.com/wp-content/uploads/2025/06/TVGlobo2025.webp"
+  },
+   {
+    "name": "tnt",
+    "id": 18,
+    "url": "https://embmaxtv.online/tnt/tracks-v1a1/mono.ts.m3u8",
+    "banner": "https://embedcanaistv.com/wp-content/uploads/2025/07/kindpng_5420951.png",
+    "poster": "https://embedcanaistv.com/wp-content/uploads/2025/07/kindpng_5420951.png"
+  },
+    {
+    "name": "paramount",
+    "id": 19,
+    "url": "https://embmaxtv.online/paramountplus/tracks-v1a1/mono.ts.m3u8",
+    "banner": "https://embedcanaistv.com/wp-content/uploads/2025/06/paramount-plus-logo-0-scaled.png",
+    "poster": "https://embedcanaistv.com/wp-content/uploads/2025/06/paramount-plus-logo-0-scaled.png"
+  },
+      {
+    "name": "bandsports",
+    "id": 20,
+    "url": "https://embmaxtv.online/bandsports/tracks-v1a1/mono.ts.m3u8",
+    "banner": "https://embedcanaistv.com/wp-content/uploads/2025/06/EuPvzJe.png",
+    "poster": "https://embedcanaistv.com/wp-content/uploads/2025/06/EuPvzJe.png"
+  }
+  
+]
+
