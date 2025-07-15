@@ -6,6 +6,8 @@ Utilizando: https://embedcanaistv.com/ (Caso não queiram que eu utilize o site 
 
 
 ```
+git clone https://github.com/JoaoVictor834/FUTSTREMIO.git
+cd FUTSTREMIO
 pnpm install
 node main.js
 ```
