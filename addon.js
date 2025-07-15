@@ -1,5 +1,6 @@
 const { addonBuilder, serveHTTP, getRouter } = require('stremio-addon-sdk')
 const SOURCES = require('./sources.json')
+const address = require('./main')
 
 const builder = new addonBuilder({
     id: 'org.joao.tvefutebolhttp',
@@ -60,7 +61,7 @@ builder.defineStreamHandler(function (args) {
 
         if (args.type === 'tv') {
 
-                const stream = { name: s.name, description: `LIVE AO VIVO DO ${s.name.toUpperCase()}`, type: 'tv', url: `http://localhost:8080/stream/${s.name}.m3u8` }
+                const stream = { name: s.name, description: `LIVE AO VIVO DO ${s.name.toUpperCase()}`, type: 'tv', url: `${address}/stream${s.name}.m3u8`}
                 return Promise.resolve({ streams: [stream] })
             } else {
                 // otherwise return no streams

@@ -78,6 +78,15 @@ app.get('/segment', async (req, res) => {
 app.use('/', router);
 
 const PORT = 8080;
-app.listen(PORT, () => {
-  console.log(`Proxy rodando na porta ${PORT}`);
+const server = app.listen(PORT, () => {
+
+const address = server.address();
+const host = (address.address === '::') ? 'localhost' : address.address;
+const protocol = (address.address === '::') ? 'http://' : 'https://';
+const port = address.port ? `:${address.port}` : '';
+const HOST = `${protocol}${host}${port}`;
+  
+  console.log(`Proxy rodando na porta ` + HOST);
+  module.exports = HOST
 });
+
