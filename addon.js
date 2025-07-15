@@ -1,7 +1,7 @@
 const { addonBuilder, getRouter } = require('stremio-addon-sdk');
 const SOURCES = require('./sources.json');
+const HOST = process.env.VERCEL_URL ? process.env.VERCEL_URL : 'http://localhost:8080'
 
-module.exports = function (HOST) {
     const builder = new addonBuilder({
         id: 'org.joao.tvefutebolhttp',
         version: '1.0.0',
@@ -78,5 +78,5 @@ module.exports = function (HOST) {
         return Promise.resolve({ streams: [] });
     });
 
-    return getRouter(builder.getInterface());
-};
+    const router = getRouter(builder.getInterface());
+    module.exports = router

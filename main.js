@@ -1,6 +1,6 @@
 const express = require('express');
 const axios = require('axios');
-const routerFactory = require('./addon');
+const router = require('./addon');
 
 const app = express();
 
@@ -75,6 +75,7 @@ app.get('/segment', async (req, res) => {
   }
 });
 
+app.use('/', router);
 const PORT = 8080;
 
 const server = app.listen(PORT, () => {
@@ -85,6 +86,4 @@ const server = app.listen(PORT, () => {
   const HOST = `${protocol}${host}${port}`;
 
   console.log(`Proxy rodando na porta ` + HOST);
-  const router = routerFactory(HOST);
-  app.use('/', router);
 });
