@@ -1,6 +1,6 @@
 const express = require('express');
 const axios = require('axios');
-const router = require('./addon');
+const routerFactory = require('./addon');
 
 const app = express();
 
@@ -19,7 +19,7 @@ const HEADERS = {
 
 app.get('/stream/:id.m3u8', async (req, res) => {
   const playlistUrl = SOURCES.find(s => s.name === req.params.id).url
-  if(!playlistUrl) return console.error('Erro em playlisturl')
+  if (!playlistUrl) return console.error('Erro em playlisturl')
 
   try {
     const response = await axios.get(playlistUrl, { headers: HEADERS });
@@ -75,18 +75,17 @@ app.get('/segment', async (req, res) => {
   }
 });
 
-app.use('/', router);
-
 const PORT = 8080;
+let HOST;
+
 const server = app.listen(PORT, () => {
+  const address = server.address();
+  const host = (address.address === '::') ? 'localhost' : address.address;
+  const protocol = (address.address === '::') ? 'http://' : 'https://';
+  const port = address.port ? `:${address.port}` : '';
+  HOST = `${protocol}${host}${port}`;
 
-const address = server.address();
-const host = (address.address === '::') ? 'localhost' : address.address;
-const protocol = (address.address === '::') ? 'http://' : 'https://';
-const port = address.port ? `:${address.port}` : '';
-const HOST = `${protocol}${host}${port}`;
-  
   console.log(`Proxy rodando na porta ` + HOST);
+  const router = routerFactory(HOST);
+  app.use('/', router);
 });
-
-module.exports = HOST
