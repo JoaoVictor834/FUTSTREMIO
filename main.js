@@ -33,7 +33,7 @@ app.get('/stream/:id.m3u8', async (req, res) => {
       if (line && !line.startsWith('#') && line.endsWith('.ts')) {
         const segmentFullUrl = new URL(line, baseUrl).href;
         const encodedSegmentUrl = encodeURIComponent(segmentFullUrl);
-        return `${HOST}/segment?url=${encodedSegmentUrl}`;
+        return `https://${HOST}/segment?url=${encodedSegmentUrl}`;
       }
       return line;
     }).join('\n');

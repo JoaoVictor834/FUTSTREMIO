@@ -71,7 +71,7 @@ const HOST = process.env.VERCEL_URL ? process.env.VERCEL_URL : 'http://localhost
                 name: s.name,
                 description: `LIVE AO VIVO DO ${s.name.toUpperCase()}`,
                 type: 'tv',
-                url: `${HOST}/stream/${s.name}.m3u8`
+                url: `https://${HOST}/stream/${s.name}.m3u8`
             };
             return Promise.resolve({ streams: [stream] });
         }
