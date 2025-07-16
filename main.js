@@ -3,6 +3,7 @@ const axios = require('axios');
 const router = require('./addon');
 
 const app = express();
+const HOST = process.env.VERCEL_URL ? process.env.VERCEL_URL : 'http://localhost:8080'
 
 const SOURCES = require('./sources.json')
 const ALLOWED_HOSTS = new Set([
@@ -32,7 +33,7 @@ app.get('/stream/:id.m3u8', async (req, res) => {
       if (line && !line.startsWith('#') && line.endsWith('.ts')) {
         const segmentFullUrl = new URL(line, baseUrl).href;
         const encodedSegmentUrl = encodeURIComponent(segmentFullUrl);
-        return `/segment?url=${encodedSegmentUrl}`;
+        return `${HOST}/segment?url=${encodedSegmentUrl}`;
       }
       return line;
     }).join('\n');
