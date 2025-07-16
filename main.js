@@ -40,6 +40,7 @@ app.get('/stream/:id.m3u8', async (req, res) => {
     }).join('\n');
 
     res.setHeader('Content-Type', 'application/vnd.apple.mpegurl');
+    res.setHeader('Cache-Control', 'no-cache');
     res.send(newPlaylist);
   } catch (err) {
     console.error('Erro ao buscar playlist:', err.message);
@@ -70,6 +71,7 @@ app.get('/segment', async (req, res) => {
     });
 
     res.setHeader('Content-Type', 'video/MP2T');
+    res.setHeader('Cache-Control', 'no-cache');
     await pipeline(response.data, res);
    // response.data.pipe(res);
   } catch (err) {
