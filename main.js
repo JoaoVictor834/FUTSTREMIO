@@ -1,6 +1,7 @@
 const express = require('express');
 const axios = require('axios');
 const router = require('./addon');
+const { pipeline } = require('stream/promises'); 
 
 const app = express();
 const HOST = process.env.VERCEL_URL ? process.env.VERCEL_URL : 'http://localhost:8080'
@@ -69,7 +70,8 @@ app.get('/segment', async (req, res) => {
     });
 
     res.setHeader('Content-Type', 'video/MP2T');
-    response.data.pipe(res);
+    await pipeline(response.data, res);
+   // response.data.pipe(res);
   } catch (err) {
     console.error('Erro no segmento:', err.message);
     res.status(502).send('Erro ao buscar segmento');
